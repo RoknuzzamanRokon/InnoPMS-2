@@ -2,8 +2,8 @@ from datetime import date, timedelta
 
 from pydantic import Field, model_validator
 
-from schemas.common import ORMBaseSchema
-from schemas.inventory import InventoryRead
+from app.schemas.common import ORMBaseSchema
+from app.schemas.inventory import InventoryRead
 
 
 class BookingRequest(ORMBaseSchema):

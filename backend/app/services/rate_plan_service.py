@@ -1,9 +1,9 @@
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 
-from models.property import Property
-from models.rate_plan import RatePlan
-from schemas.rate_plan import RatePlanCreate
+from app.models.property import Property
+from app.models.rate_plan import RatePlan
+from app.schemas.rate_plan import RatePlanCreate
 
 
 def create_rate_plan(db: Session, payload: RatePlanCreate) -> RatePlan:

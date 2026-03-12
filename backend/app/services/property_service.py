@@ -1,8 +1,8 @@
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from models.property import Property
-from schemas.property import PropertyCreate
+from app.models.property import Property
+from app.schemas.property import PropertyCreate
 
 
 def create_property(db: Session, payload: PropertyCreate) -> Property:

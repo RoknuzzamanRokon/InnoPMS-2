@@ -4,11 +4,11 @@ from fastapi import HTTPException, status
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
-from models.inventory import RoomInventory
-from models.property import Property
-from models.room import Room
-from schemas.inventory import InventoryInitializeDemoRequest, InventoryInitializeRequest
-from utils.dates import iter_dates
+from app.models.inventory import RoomInventory
+from app.models.property import Property
+from app.models.room import Room
+from app.schemas.inventory import InventoryInitializeDemoRequest, InventoryInitializeRequest
+from app.utils.dates import iter_dates
 
 
 def calculate_available_rooms(total_rooms: int, booked_rooms: int, blocked_rooms: int) -> int:

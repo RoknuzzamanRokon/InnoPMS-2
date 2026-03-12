@@ -2,7 +2,7 @@ from datetime import date, datetime, timedelta
 
 from pydantic import Field, model_validator
 
-from schemas.common import ORMBaseSchema
+from app.schemas.common import ORMBaseSchema
 
 
 class InventoryInitializeRequest(ORMBaseSchema):

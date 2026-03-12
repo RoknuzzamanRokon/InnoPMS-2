@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from api.routes import bookings, inventory, properties, rate_plans, rooms
+from app.api.routes import bookings, inventory, properties, rate_plans, rooms
 
 api_router = APIRouter()
 api_router.include_router(properties.router, prefix="/properties", tags=["properties"])

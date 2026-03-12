@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
-from api.deps import get_db
-from schemas.room import BulkRoomCreate, BulkRoomDemoRequest, BulkRoomRead, RoomCreate, RoomRead
-from services.room_service import bulk_create_rooms, create_room, demo_create_ten_rooms
+from app.api.deps import get_db
+from app.schemas.room import BulkRoomCreate, BulkRoomDemoRequest, BulkRoomRead, RoomCreate, RoomRead
+from app.services.room_service import bulk_create_rooms, create_room, demo_create_ten_rooms
 
 router = APIRouter()
 

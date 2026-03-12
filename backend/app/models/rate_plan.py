@@ -5,7 +5,7 @@ from enum import Enum
 from sqlalchemy import Date, Enum as SqlEnum, ForeignKey, Integer, Numeric, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from db.base_class import Base
+from app.db.base_class import Base
 
 
 class ApplyToEnum(str, Enum):

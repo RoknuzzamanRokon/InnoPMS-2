@@ -3,13 +3,13 @@ from datetime import date
 from fastapi import APIRouter, Depends, Query, status
 from sqlalchemy.orm import Session
 
-from api.deps import get_db
-from schemas.inventory import (
+from app.api.deps import get_db
+from app.schemas.inventory import (
     InventoryInitializeDemoRequest,
     InventoryInitializeRequest,
     InventoryRead,
 )
-from services.inventory_service import get_inventory, initialize_inventory, initialize_inventory_demo
+from app.services.inventory_service import get_inventory, initialize_inventory, initialize_inventory_demo
 
 router = APIRouter()
 

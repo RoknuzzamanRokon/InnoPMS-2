@@ -2,15 +2,15 @@ from fastapi import HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from models.inventory import RoomInventory
-from schemas.booking import (
+from app.models.inventory import RoomInventory
+from app.schemas.booking import (
     BlockRoomsRequest,
     BookingRequest,
     BookingResponse,
     DemoBookingRequest,
     ReleaseBlockedRoomsRequest,
 )
-from services.inventory_service import calculate_available_rooms
+from app.services.inventory_service import calculate_available_rooms
 
 
 def _load_inventory_rows_for_update(db: Session, property_id: int, room_type_id: int, start_date, end_date) -> list[RoomInventory]:
