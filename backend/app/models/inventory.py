@@ -1,6 +1,6 @@
 from datetime import date, datetime
 
-from sqlalchemy import BigInteger, Date, DateTime, ForeignKey, SmallInteger, UniqueConstraint, func
+from sqlalchemy import Date, DateTime, ForeignKey, Integer, SmallInteger, UniqueConstraint, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from db.base_class import Base
@@ -14,11 +14,11 @@ class RoomInventory(Base):
         ),
     )
 
-    inventory_id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
+    inventory_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     property_id: Mapped[int] = mapped_column(
-        BigInteger, ForeignKey("property.property_id", ondelete="CASCADE"), index=True
+        Integer, ForeignKey("property.property_id", ondelete="CASCADE"), index=True
     )
-    room_type_id: Mapped[int] = mapped_column(BigInteger, index=True)
+    room_type_id: Mapped[int] = mapped_column(Integer, index=True)
     inventory_date: Mapped[date] = mapped_column(Date, index=True)
     total_rooms: Mapped[int] = mapped_column(SmallInteger)
     available_rooms: Mapped[int] = mapped_column(SmallInteger)

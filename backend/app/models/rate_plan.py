@@ -2,7 +2,7 @@ from datetime import date
 from decimal import Decimal
 from enum import Enum
 
-from sqlalchemy import BigInteger, Date, Enum as SqlEnum, ForeignKey, Numeric, String
+from sqlalchemy import Date, Enum as SqlEnum, ForeignKey, Integer, Numeric, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from db.base_class import Base
@@ -17,9 +17,9 @@ class ApplyToEnum(str, Enum):
 class RatePlan(Base):
     __tablename__ = "rate_plan"
 
-    rate_plan_id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
+    rate_plan_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     property_id: Mapped[int] = mapped_column(
-        BigInteger, ForeignKey("property.property_id", ondelete="CASCADE"), index=True
+        Integer, ForeignKey("property.property_id", ondelete="CASCADE"), index=True
     )
     start_date: Mapped[date] = mapped_column(Date)
     end_date: Mapped[date] = mapped_column(Date)

@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import BigInteger, DateTime, SmallInteger, String, func
+from sqlalchemy import DateTime, Integer, SmallInteger, String, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from db.base_class import Base
@@ -9,7 +9,7 @@ from db.base_class import Base
 class Property(Base):
     __tablename__ = "property"
 
-    property_id: Mapped[int] = mapped_column(BigInteger, primary_key=True, autoincrement=True)
+    property_id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     name: Mapped[str] = mapped_column(String(255))
     property_type: Mapped[str] = mapped_column(String(100))
     star_rating: Mapped[int] = mapped_column(SmallInteger)

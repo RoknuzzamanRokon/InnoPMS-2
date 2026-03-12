@@ -44,7 +44,7 @@ Swagger UI: `http://127.0.0.1:8000/docs`
 
 ## Business Rules
 
-- `room_type_id` is a manual `BIGINT` field.
+- `room_type_id` is a manual `INTEGER` field.
 - No `ROOM_TYPE` table exists in this starter.
 - No foreign key is added on `room_type_id`.
 - Inventory is maintained by `property_id + room_type_id + inventory_date`.
