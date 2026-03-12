@@ -2,8 +2,8 @@ from datetime import date
 
 from pydantic import Field, model_validator
 
-from app.models.room import RoomStatusEnum
-from app.schemas.common import ORMBaseSchema
+from models.room import RoomStatusEnum
+from schemas.common import ORMBaseSchema
 
 
 class RoomCreate(ORMBaseSchema):

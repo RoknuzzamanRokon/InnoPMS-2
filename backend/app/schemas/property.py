@@ -2,7 +2,7 @@ from datetime import datetime
 
 from pydantic import Field
 
-from app.schemas.common import ORMBaseSchema
+from schemas.common import ORMBaseSchema
 
 
 class PropertyCreate(ORMBaseSchema):

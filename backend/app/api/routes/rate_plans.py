@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
-from app.api.deps import get_db
-from app.schemas.rate_plan import RatePlanCreate, RatePlanRead
-from app.services.rate_plan_service import create_rate_plan
+from api.deps import get_db
+from schemas.rate_plan import RatePlanCreate, RatePlanRead
+from services.rate_plan_service import create_rate_plan
 
 router = APIRouter()
 

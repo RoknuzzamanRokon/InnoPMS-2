@@ -3,7 +3,7 @@ from datetime import date, datetime
 from sqlalchemy import BigInteger, Date, DateTime, ForeignKey, SmallInteger, UniqueConstraint, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.db.base_class import Base
+from db.base_class import Base
 
 
 class RoomInventory(Base):

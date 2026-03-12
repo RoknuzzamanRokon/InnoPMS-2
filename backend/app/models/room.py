@@ -3,7 +3,7 @@ from enum import Enum
 from sqlalchemy import BigInteger, Enum as SqlEnum, ForeignKey, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.db.base_class import Base
+from db.base_class import Base
 
 
 class RoomStatusEnum(str, Enum):

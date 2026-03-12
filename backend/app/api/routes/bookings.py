@@ -1,15 +1,15 @@
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 
-from app.api.deps import get_db
-from app.schemas.booking import (
+from api.deps import get_db
+from schemas.booking import (
     BlockRoomsRequest,
     BookingRequest,
     BookingResponse,
     DemoBookingRequest,
     ReleaseBlockedRoomsRequest,
 )
-from app.services.booking_service import block_rooms, book_rooms, demo_book_two_rooms, release_blocked_rooms
+from services.booking_service import block_rooms, book_rooms, demo_book_two_rooms, release_blocked_rooms
 
 router = APIRouter()
 

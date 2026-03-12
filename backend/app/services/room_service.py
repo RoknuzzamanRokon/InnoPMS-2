@@ -5,12 +5,12 @@ from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from app.models.inventory import RoomInventory
-from app.models.property import Property
-from app.models.room import Room
-from app.schemas.room import BulkRoomCreate, BulkRoomDemoRequest, BulkRoomRead, RoomCreate
-from app.services.inventory_service import calculate_available_rooms
-from app.utils.dates import iter_dates
+from models.inventory import RoomInventory
+from models.property import Property
+from models.room import Room
+from schemas.room import BulkRoomCreate, BulkRoomDemoRequest, BulkRoomRead, RoomCreate
+from services.inventory_service import calculate_available_rooms
+from utils.dates import iter_dates
 
 
 def _assert_property_exists(db: Session, property_id: int) -> None:

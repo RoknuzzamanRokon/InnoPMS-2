@@ -3,8 +3,8 @@ from decimal import Decimal
 
 from pydantic import Field, model_validator
 
-from app.models.rate_plan import ApplyToEnum
-from app.schemas.common import ORMBaseSchema
+from models.rate_plan import ApplyToEnum
+from schemas.common import ORMBaseSchema
 
 
 class RatePlanCreate(ORMBaseSchema):
